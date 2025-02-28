@@ -20,6 +20,8 @@ Pod::Spec.new do |s|
   s.dependency          'Flutter'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 
+  s.source = { :git => "https://github.com/NoriTarlam/CocoaPodsSpecs.git"}
+
   s.subspec 'min' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
@@ -123,7 +125,6 @@ Pod::Spec.new do |s|
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0"
     ss.ios.deployment_target = '12.1'
-    ss.source = { :git => "https://github.com/NoriTarlam/CocoaPodsSpecs.git"}
   end
 
   s.subspec 'full-gpl-lts' do |ss|
@@ -131,7 +132,6 @@ Pod::Spec.new do |s|
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"
     ss.ios.deployment_target = '10'
-    ss.source = { :git => "https://github.com/NoriTarlam/CocoaPodsSpecs.git"}
   end
 
 end

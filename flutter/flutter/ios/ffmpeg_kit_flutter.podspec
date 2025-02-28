@@ -123,7 +123,6 @@ Pod::Spec.new do |s|
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0"
     ss.ios.deployment_target = '12.1'
-    ss.source = { :git => "https://github.com/NoriTarlam/CocoaPodsSpecs.git"}
   end
 
   s.subspec 'full-gpl-lts' do |ss|
@@ -131,7 +130,6 @@ Pod::Spec.new do |s|
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"
     ss.ios.deployment_target = '10'
-    ss.source = { :git => "https://github.com/NoriTarlam/CocoaPodsSpecs.git"}
   end
 
 end

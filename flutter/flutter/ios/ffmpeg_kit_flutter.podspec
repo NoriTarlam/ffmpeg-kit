@@ -128,6 +128,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'full-gpl-lts' do |ss|
+    ss.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"

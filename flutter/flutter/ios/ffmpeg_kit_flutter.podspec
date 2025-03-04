@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.dependency          'Flutter'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 
-  s.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git2' }
+  s.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
 
   s.subspec 'min' do |ss|
     ss.source_files         = 'Classes/**/*'

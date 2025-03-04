@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.static_framework    = true
 
+  #s.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
   s.source              = { :path => '.' }
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
@@ -19,8 +20,6 @@ Pod::Spec.new do |s|
 
   s.dependency          'Flutter'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-
-  s.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
 
   s.subspec 'min' do |ss|
     ss.source_files         = 'Classes/**/*'
@@ -128,7 +127,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'full-gpl-lts' do |ss|
-    ss.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
+    #ss.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"

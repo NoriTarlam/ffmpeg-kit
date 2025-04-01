@@ -129,7 +129,26 @@ Pod::Spec.new do |s|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"
+
+    ss.ios.vendored_frameworks = 'Frameworks/ffmpegkit.framework',
+                                 'Frameworks/libavcodec.framework',
+                                 'Frameworks/libavdevice.framework',
+                                 'Frameworks/libavfilter.framework',
+                                 'Frameworks/libavformat.framework',
+                                 'Frameworks/libavutil.framework',
+                                 'Frameworks/libswresample.framework',
+                                 'Frameworks/libswscale.framework'
+    
+    ss.ios.frameworks = 'AudioToolbox', 'CoreMedia'
+    ss.libraries = 'z', 'bz2', 'c++', 'iconv'
     ss.ios.deployment_target = '10'
+    
+    s.prepare_command = <<-CMD
+      if [ ! -d "./Frameworks" ]; then
+        chmod +x ../scripts/setup_ios.sh
+        ../scripts/setup_ios.sh
+      fi
+    CMD
   end
 
 end

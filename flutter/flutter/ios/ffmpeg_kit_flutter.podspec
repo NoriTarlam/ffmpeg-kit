@@ -11,21 +11,11 @@ Pod::Spec.new do |s|
   s.requires_arc        = true
   s.static_framework    = true
 
-  #s.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
   s.source              = { :path => '.' }
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
 
   s.default_subspec     = 'full-gpl-lts'
-  #s.default_subspec = 'ffmpeg_kit_ios_local'
-  #s.subspec 'ffmpeg_kit_ios_local' do |ss|
-  #  ss.vendored_frameworks = 'Frameworks/ffmpeg-kit-ios-https/ffmpegkit.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libavdevice.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libavcodec.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libavfilter.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libavformat.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libavutil.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libswresample.xcframework', 'Frameworks/ffmpeg-kit-ios-https/libswscale.xcframework'
-  #end
-
-作者：白话666
-链接：https://juejin.cn/post/7482753184654721074
-来源：稀土掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
   s.dependency          'Flutter'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
@@ -136,7 +126,6 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'full-gpl-lts' do |ss|
-    #ss.source = { :git => 'https://github.com/NoriTarlam/ffmpeg-kit-ios-full-gpl.git' }
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"

@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
   s.subspec 'full-gpl-lts' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
-    ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"
+    #ss.dependency 'ffmpeg-kit-ios-full-gpl', "6.0.LTS"
 
     ss.ios.vendored_frameworks = 'Frameworks/ffmpegkit.framework',
                                  'Frameworks/libavcodec.framework',

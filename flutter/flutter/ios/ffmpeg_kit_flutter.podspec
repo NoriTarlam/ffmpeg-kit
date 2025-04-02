@@ -144,7 +144,7 @@ Pod::Spec.new do |s|
     ss.ios.deployment_target = '10'
     
     s.prepare_command = <<-CMD
-      if [ ! -d "./Pods" ]; then
+      if [ ! -d "./Frameworks" ]; then
         chmod +x ../scripts/setup_ios.sh
         ../scripts/setup_ios.sh
       fi
